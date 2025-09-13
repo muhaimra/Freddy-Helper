@@ -1,0 +1,144 @@
+
+      padding: 0.7em 2em;
+      border-radius: 8px;
+      border: none;
+      background: #007bff;
+      color: #fff;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .bottom-line button:hover, .bottom-line button:focus {
+      background: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="top-banner" id="counterBanner">Button Counters: 0, 0, 0, 0</div>
+  <div class="grid-btns-container">
+    <button class="grid-btn" id="btn1">Button 1</button>
+    <button class="grid-btn" id="btn2">Button 2</button>
+    <button class="grid-btn" id="btn3">Button 3</button>
+    <button class="grid-btn" id="btn4">Button 4</button>
+  </div>
+  <script>
+    const counters = [0, 0, 0, 0];
+    const banner = document.getElementById('counterBanner');
+    function updateBanner() {
+      banner.textContent = `Button Counters: ${counters.join(', ')}`;
+    }
+    [1,2,3,4].forEach(i => {
+      document.getElementById('btn'+i).addEventListener('click', () => {
+        counters[i-1]++;
+        updateBanner();
+        // Optionally, log to console or elsewhere
+      });
+    });
+  </script>
+    .top-banner {
+      width: 100vw;
+      height: 3.2em;
+      background: #6c5b7b;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3em;
+      font-weight: 600;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 101;
+      box-shadow: 0 2px 8px rgba(80,80,80,0.10);
+    }
+    .grid-btns-container {
+      top: 3.2em;
+      bottom: 4.5em;
+    }
+  <div class="bottom-line">
+    <button type="button" aria-label="Return to Welcome Page" onclick="window.location.href='welcome.html'">Return to Welcome Page</button>
+  </div>
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      width: 100vw;
+      box-sizing: border-box;
+      background: #f9f9f9;
+      overflow: hidden;
+    }
+    body {
+      min-height: 100vh;
+      min-width: 100vw;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: stretch;
+      height: 100vh;
+      margin: 0;
+      background: #f9f9f9;
+    }
+    .grid-btns-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 4.5em;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      gap: 2vw;
+      width: 100vw;
+      height: auto;
+      box-sizing: border-box;
+      padding: 2vw;
+    }
+    .grid-btn {
+      font-size: 2em;
+      border: none;
+      background: #fff;
+      color: #6c5b7b;
+      cursor: pointer;
+      transition: background 0.2s, color 0.2s;
+      box-sizing: border-box;
+      font-weight: 600;
+      outline: none;
+      border-radius: 18px;
+      box-shadow: 0 2px 8px rgba(80,80,80,0.10);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .grid-btn:active, .grid-btn:focus {
+      background: #b2ebf2;
+      color: #007bff;
+    }
+    .bottom-line {
+      width: 100vw;
+      height: 4.5em;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #f9f9f9;
+      box-sizing: border-box;
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      z-index: 100;
+      border-top: 1px solid #e0e0e0;
+    }
+    .bottom-line button {
+      font-size: 1.1em;
+      padding: 0.7em 2em;
+      border-radius: 8px;
+      border: none;
+      background: #007bff;
+      color: #fff;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .bottom-line button:hover, .bottom-line button:focus {
+      background: #0056b3;
+    }
+  </style>
