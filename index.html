@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login/Register</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container auth-box">
+    <h2>Register</h2>
+    <input id="reg-email" type="email" placeholder="Email">
+    <input id="reg-password" type="password" placeholder="Password">
+    <button id="register">Register</button>
+
+    <h2>Login</h2>
+    <input id="login-email" type="email" placeholder="Email">
+    <input id="login-password" type="password" placeholder="Password">
+    <button id="login">Login</button>
+
+    <p id="message"></p>
+  </div>
+
+  <div class="container user-box" style="display:none;">
+    <h2>Welcome!</h2>
+    <p id="user-email"></p>
+    <button id="logout">Logout</button>
+  </div>
+
+  <!-- Supabase client -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="script.js"></script>
+</body>
+</html>
